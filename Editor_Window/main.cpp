@@ -3,6 +3,11 @@
 
 #include "framework.h"
 #include "Editor_Window.h"
+#include "CommonInclude.h"
+// ..\\ -> 상위 폴더로 이동
+#include "..\\CopyEngine_SOURCE\\copyApplication.h"
+
+Application app;
 
 #define MAX_LOADSTRING 100
 
@@ -43,15 +48,33 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,             // 프로그램의 �
 
     MSG msg;
 
-    // 기본 메시지 루프입니다:
-    while (GetMessage(&msg, nullptr, 0, 0))
+    // GetMessage(&msg, nullptr, 0, 0);
+    // 프로세스에서 발생한 메세지를 메세지 큐에서 가져오는 함수
+    // 메세지큐에 아무것도 없다면, 아무 메세지도 가져오지 않게 됨
+
+    // PeekMeesage : 메세지 큐의 메세지 유무에 상관없이 함수가 리턴됨.
+    //               (리턴 값이 true : 메세지 존재, false : 메세지가 없음)
+
+    while (true)
     {
-        if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
-        {
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
+        // PM_REMOVE : 메세지를 읽은 경우 해당 메세지를 삭제
+        if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
+        {   // 메세지가 존재하는 경우,
+            if (msg.message == WM_QUIT)     // 메세지가 종료 메세지인 경우 루프 종료
+                break;
+
+            if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+            {
+                TranslateMessage(&msg);
+                DispatchMessage(&msg);
+            }
+        }
+        else
+        {   // 메세지가 존재하지 않는 경우,
+            
         }
     }
+
 
     return (int) msg.wParam;
 }
@@ -142,6 +165,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 return DefWindowProc(hWnd, message, wParam, lParam);
             }
         }
+        break;
+    case WM_KEYDOWN:
+        // 키 입력에 대한 처리
+
         break;
     case WM_PAINT:
         {
