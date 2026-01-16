@@ -1,5 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
+#include "copyGameObject.h"
 
 namespace copy
 {
@@ -25,9 +26,7 @@ namespace copy
 		HWND mHwnd;			// 렌더링 시 항상 창의 인스턴스 정보인 핸들을 요구함.
 		HDC mHdc;
 
-		float mSpeed;
-		float mX;
-		float mY;
+		GameObject mPlayer;
 	};
 
 }

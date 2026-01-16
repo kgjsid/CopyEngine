@@ -6,9 +6,6 @@ namespace copy
 	{
 		mHwnd = nullptr;
 		mHdc = nullptr;
-		mSpeed = 0.0f;
-		mX = 0.0f;
-		mY = 0.0f;
 	}
 
 	Application::~Application()
@@ -20,6 +17,8 @@ namespace copy
 		mHwnd = hwnd;
 		// GetDC : 핸들을 인자로 DC를 가져오는 메소드
 		mHdc = GetDC(mHwnd);
+
+		mPlayer.SetPosition(0.0f, 0.0f);
 	}
 
 	void Application::Run()
@@ -31,29 +30,7 @@ namespace copy
 
 	void Application::Update()
 	{
-		mSpeed += 0.01f;
-
-		// 키보드 입력을 받기 위한 메소드
-		if (GetAsyncKeyState(VK_LEFT) & 0x8000)
-		{
-			mX -= 0.01f;
-		}
-
-		if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
-		{
-			mX += 0.01f;
-		}
-
-		if (GetAsyncKeyState(VK_UP) & 0x8000)
-		{
-			mY -= 0.01f;
-		}
-
-		if (GetAsyncKeyState(VK_DOWN) & 0x8000)
-		{
-			mY += 0.01f;
-		}
-
+		mPlayer.Update();
 	}
 
 	void Application::LateUpdate()
@@ -63,18 +40,6 @@ namespace copy
 
 	void Application::Render()
 	{
-		HBRUSH brush = CreateSolidBrush(RGB(0, 0, 255));
-
-		HBRUSH oldBrush = (HBRUSH)SelectObject(mHdc, brush);
-	
-		HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
-		HPEN oldPen = (HPEN)SelectObject(mHdc, redPen);
-		SelectObject(mHdc, oldPen);
-
-		Rectangle(mHdc, 100 + mX, 100 + mY, 200 + mX, 200 + mY);
-
-		SelectObject(mHdc, oldBrush);
-		DeleteObject(brush);
-		DeleteObject(redPen);
+		mPlayer.Render(mHdc);
 	}
 }
