@@ -7,7 +7,7 @@
 // ..\\ -> 상위 폴더로 이동
 #include "..\\CopyEngine_SOURCE\\copyApplication.h"
 
-Application app;
+copy::Application application;
 
 #define MAX_LOADSTRING 100
 
@@ -57,6 +57,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,             // 프로그램의 �
 
     while (true)
     {
+        application.Run();
+
         // PM_REMOVE : 메세지를 읽은 경우 해당 메세지를 삭제
         if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
         {   // 메세지가 존재하는 경우,
@@ -71,7 +73,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,             // 프로그램의 �
         }
         else
         {   // 메세지가 존재하지 않는 경우,
-            
+            application.Run();
         }
     }
 
@@ -129,6 +131,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
       return FALSE;
    }
 
+   application.Initialize(hWnd);
+
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
 
@@ -172,38 +176,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         break;
     case WM_PAINT:
         {
-            PAINTSTRUCT ps;
-            HDC hdc = BeginPaint(hWnd, &ps);
 
-            HBRUSH brush = CreateSolidBrush(RGB(0, 0, 255));
-            // SelectObject의 반환 값은 이전의 사용된 것
-            HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, brush);
-            // DC란 화면 출력에 필요한 모든 정보를 가지는 데이터 구조체
-            // GDI 모듈에 의해서 관리됨
-            // 어떤 폰트, 어떤 선의 굵기, 어떤 색상...
-            // 화면 출력에 필요한 모든 경우는 WINAPI에서는 DC를 통해서 작업을 진행
-
-            Rectangle(hdc, 100, 100, 200, 200);
-
-            (HBRUSH)SelectObject(hdc, oldBrush);
-            // API에서 제공해주는 삭제 메소드
-            DeleteObject(brush);
-
-            HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
-            HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
-
-            Ellipse(hdc, 300, 300, 400, 400);
-            SelectObject(hdc, oldPen);
-            DeleteObject(redPen);
-
-            // 생성 및 삭제 과정이 필요하지만 기본적으로 자주 사용되는 GDI 오브젝트들을 미리 DC에 만들어져 있음
-            // 그 오브젝트는 스톡 오브젝트라고 하며 사용 후 삭제할 필요 없음
-            HBRUSH grayBrush = (HBRUSH)GetStockObject(GRAY_BRUSH);
-            oldBrush = (HBRUSH)SelectObject(hdc, grayBrush);
-            Rectangle(hdc, 10, 10, 50, 50);
-            SelectObject(hdc, oldBrush);
-
-            EndPaint(hWnd, &ps);
         }
         break;
     case WM_DESTROY:
