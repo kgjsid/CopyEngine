@@ -1,4 +1,5 @@
 #include "copyApplication.h"
+#include "copyInput.h"
 
 namespace copy
 {
@@ -19,6 +20,8 @@ namespace copy
 		mHdc = GetDC(mHwnd);
 
 		mPlayer.SetPosition(0.0f, 0.0f);
+
+		Input::Initialize();
 	}
 
 	void Application::Run()
@@ -30,6 +33,8 @@ namespace copy
 
 	void Application::Update()
 	{
+		Input::Update();
+
 		mPlayer.Update();
 	}
 
