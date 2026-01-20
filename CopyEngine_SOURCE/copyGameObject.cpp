@@ -1,5 +1,6 @@
 #include "copyGameObject.h" 
 #include "copyInput.h"
+#include "copyTime.h"
 
 namespace copy
 {
@@ -15,24 +16,26 @@ namespace copy
 
 	void GameObject::Update()
 	{
-		if (Input::GetKey(eKeyCode::A) || Input::GetKey(eKeyCode::Left))
+		const int speed = 100.0f;
+
+		if (Input::GetKey(eKeyCode::A))
 		{
-			mX -= 0.01f;
+			mX -= speed * Time::DeltaTime();
 		}
 
-		if (Input::GetKey(eKeyCode::D) || Input::GetKey(eKeyCode::Right))
+		if (Input::GetKey(eKeyCode::D))
 		{
-			mX += 0.01f;
+			mX += speed * Time::DeltaTime();
 		}
 
-		if (Input::GetKey(eKeyCode::W) || Input::GetKey(eKeyCode::Up))
+		if (Input::GetKey(eKeyCode::W))
 		{
-			mY -= 0.01f;
+			mY -= speed * Time::DeltaTime();
 		}
 
-		if (Input::GetKey(eKeyCode::S) || Input::GetKey(eKeyCode::Down))
+		if (Input::GetKey(eKeyCode::S))
 		{
-			mY += 0.01f;
+			mY += speed * Time::DeltaTime();
 		}
 	}
 
