@@ -6,6 +6,7 @@
 #include "CommonInclude.h"
 // ..\\ -> 상위 폴더로 이동
 #include "..\\CopyEngine_SOURCE\\copyApplication.h"
+#include "..\\CopyEngine_WINDOW\\copyLoadScene.h"
 
 copy::Application application;
 

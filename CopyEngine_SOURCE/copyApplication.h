@@ -23,6 +23,12 @@ namespace copy
 		void LateUpdate();
 		void Render();
 	private:
+		void AdjustRect(HWND hwnd, UINT width, UINT height);
+		void CreateBuffer(UINT width, UINT height);
+		void ClearRenderTarget();
+		void CopyRenderTarget(HDC source, HDC dest);
+
+	private:
 		HWND mHwnd;			// 렌더링 시 항상 창의 인스턴스 정보인 핸들을 요구함.
 		HDC mHdc;
 		
@@ -32,7 +38,7 @@ namespace copy
 		UINT mWidth;
 		UINT mHeight;
 
-		GameObject mPlayer;
+		// std::vector<Scene*> mScenes;
 	};
 
 }

@@ -16,14 +16,20 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)copySceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyTime.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)copyApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)copySceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyTime.cpp" />
   </ItemGroup>
 </Project>
