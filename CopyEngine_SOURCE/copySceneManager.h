@@ -14,6 +14,21 @@ namespace copy
 			scene->Initialize();
 
 			mScene.insert(std::make_pair(name, scene));
+
+			return scene;
+		}
+
+		static Scene* LoadScene(const std::wstring& name)
+		{
+			std::map<std::wstring, Scene*>::iterator iter
+				= mScene.find(name);
+
+			if (iter == mScene.end())
+				return nullptr;
+
+			mActiveScene = iter->second;
+
+			return iter->second;
 		}
 
 		static void Initialize();

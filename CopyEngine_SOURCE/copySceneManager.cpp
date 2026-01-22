@@ -2,8 +2,12 @@
 
 namespace copy
 {
+	Scene* SceneManager::mActiveScene = nullptr;
+	std::map<const std::wstring, Scene*> SceneManager::mScene = {};
+
 	void SceneManager::Initialize()
 	{
+
 	}
 	void SceneManager::Update()
 	{

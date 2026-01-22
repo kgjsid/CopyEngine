@@ -4,7 +4,7 @@ namespace copy
 {
 	Scene::Scene()
 	{
-
+		mGameObjects = {};
 	}
 
 	Scene::~Scene()
@@ -34,5 +34,9 @@ namespace copy
 		{
 			gameObj->Render(hdc);
 		}
+	}
+	void Scene::AddGameObject(GameObject* gameObject)
+	{
+		mGameObjects.push_back(gameObject);
 	}
 }

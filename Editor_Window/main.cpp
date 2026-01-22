@@ -140,6 +140,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
 
+   copy::LoadScenes();
+
    return TRUE;
 }
 
