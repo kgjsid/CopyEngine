@@ -1,4 +1,8 @@
 #include "copyPlayScene.h"
+#include "copyGameObject.h"
+#include "copyPlayer.h"
+#include "copyTransform.h"
+#include "copySpriteRenderer.h"
 
 namespace copy
 {
@@ -10,12 +14,16 @@ namespace copy
 	}
 	void PlayScene::Initialize()
 	{
-		for (size_t i = 0; i < 100; i++)
-		{
-			GameObject* obj = new GameObject();
-			obj->SetPosition(rand() % 1600, rand() % 900);
-			AddGameObject(obj);
-		}
+		Player* pl = new Player();
+
+		Transform* tr = pl->AddComponet<Transform>();
+		tr->SetPos(800, 450);
+		tr->SetName(L"TR");
+
+		SpriteRenderer* sr = pl->AddComponet<SpriteRenderer>();
+		sr->SetName(L"SR");
+
+		AddGameObject(pl);
 	}
 	void PlayScene::Update()
 	{
