@@ -14,16 +14,16 @@ namespace copy
 	}
 	void PlayScene::Initialize()
 	{
-		Player* pl = new Player();
-
-		Transform* tr = pl->AddComponet<Transform>();
-		tr->SetPos(800, 450);
+		Player* bg = new Player();
+		Transform* tr = bg->AddComponet<Transform>();
+		tr->SetPos(Vector2(0, 0));
 		tr->SetName(L"TR");
 
-		SpriteRenderer* sr = pl->AddComponet<SpriteRenderer>();
+		SpriteRenderer* sr = bg->AddComponet<SpriteRenderer>();
 		sr->SetName(L"SR");
+		sr->ImageLoad(L"D:\\Win\\CopyEngine\\Resources\\CloudOcean.png");
 
-		AddGameObject(pl);
+		AddGameObject(bg);
 	}
 	void PlayScene::Update()
 	{

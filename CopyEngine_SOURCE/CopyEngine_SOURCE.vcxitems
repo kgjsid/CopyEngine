@@ -20,6 +20,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)copyEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copySceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copySpriteRenderer.h" />
@@ -32,6 +35,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)copyEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copySceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copySpriteRenderer.cpp" />
