@@ -38,6 +38,10 @@ namespace copy
 		static bool GetKey(eKeyCode key) { return mKeys[(UINT)key].state == eKeyState::Pressed; }
 
 	private:
+		// std::vector
+		// 연속된 메모리를 사용하는 동적 배열(C#의 리스트와 유사)
+		// 연속된 메모리이므로 접근이 빠르고 뒤에 추가하는 행위는 매우 빠름
+		// 다만 중간의 삽입 삭제는 느리며 캐시 효율이 좋음
 		static std::vector<Key> mKeys;
 	};
 }
