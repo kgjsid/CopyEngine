@@ -34,6 +34,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)copyTime.cpp">
       <Filter>Helpers</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyLayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)copyApplication.h" />
@@ -71,6 +72,10 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)copyTime.h">
       <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyEnums.h">
+      <Filter>Common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

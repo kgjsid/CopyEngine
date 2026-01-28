@@ -11,6 +11,7 @@ namespace copy
 {
 	PlayScene::PlayScene()
 	{
+		bg = nullptr;
 	}
 	PlayScene::~PlayScene()
 	{
@@ -26,7 +27,7 @@ namespace copy
 		sr->SetName(L"SR");
 		sr->ImageLoad(L"D:\\Win\\CopyEngine\\Resources\\CloudOcean.png");
 
-		AddGameObject(bg);
+		AddGameObject(bg, eLayerType::BackGround);
 	}
 	void PlayScene::Update()
 	{
