@@ -32,6 +32,9 @@ namespace copy
 
 		static Scene* LoadScene(const std::wstring& name)
 		{
+			if (mActiveScene)			// 이전 Scene의 OnExit()
+				mActiveScene->OnExit();
+
 			std::map<std::wstring, Scene*>::iterator iter
 				= mScene.find(name);
 
@@ -39,6 +42,7 @@ namespace copy
 				return nullptr;
 
 			mActiveScene = iter->second;
+			mActiveScene->OnEnter();	// 새로 진입하는 Scene의 OnEnter();
 
 			return iter->second;
 		}

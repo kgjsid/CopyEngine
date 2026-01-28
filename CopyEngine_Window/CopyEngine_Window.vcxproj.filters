@@ -4,16 +4,33 @@
     <Filter Include="Scenes">
       <UniqueIdentifier>{e4d0411f-7f85-465f-8bc9-8ee4a3468da5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Contents">
+      <UniqueIdentifier>{2371e62f-2409-4245-8e33-83b98e124035}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="copyLoadScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="copyPlayScene.h" />
-    <ClInclude Include="copyPlayer.h" />
+    <ClInclude Include="copyTitleScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="copyPlayScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="copyPlayer.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="copyPlayScene.cpp" />
-    <ClCompile Include="copyPlayer.cpp" />
+    <ClCompile Include="copyPlayScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="copyTitleScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="copyPlayer.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

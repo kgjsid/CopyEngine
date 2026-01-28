@@ -13,6 +13,15 @@ namespace copy
 	}
 	void Scene::Initialize()
 	{
+
+	}
+	void Scene::OnEnter()
+	{
+
+	}
+	void Scene::OnExit()
+	{
+
 	}
 	void Scene::Update()
 	{

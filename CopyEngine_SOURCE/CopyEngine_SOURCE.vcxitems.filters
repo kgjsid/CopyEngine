@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyMath.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyEntity.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copySpriteRenderer.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyTransform.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyGameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copySceneManager.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyInput.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyTime.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyMath.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyEntity.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copySpriteRenderer.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyTransform.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyGameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copySceneManager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyInput.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyTime.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{31472008-29ce-4eaf-bcef-f5c891cbe030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{e2837ee0-6cdb-4180-b012-1f08483abe79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{7c293265-1cab-4317-b0c3-4f4baa1c9d38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{82bf9cff-a333-46d3-8ee1-8d130af36cb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{b5806142-703c-48a5-9517-b39df88a5618}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

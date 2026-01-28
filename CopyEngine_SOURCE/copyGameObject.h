@@ -19,6 +19,7 @@ namespace copy
 		T* AddComponet()
 		{
 			T* comp = new T();
+			comp->Initialize();
 			comp->SetOwner(this);
 			mComponents.push_back(comp);
 
