@@ -6,9 +6,9 @@ namespace copy
 	{
 		mLayers = {};
 
-		mLayers.resize((UINT)eLayerType::Max);
+		mLayers.resize((UINT)enums::eLayerType::Max);
 
-		for (size_t i = 0; i < (UINT)eLayerType::Max; i++)
+		for (size_t i = 0; i < (UINT)enums::eLayerType::Max; i++)
 		{
 			mLayers[i] = new Layer();
 		}
@@ -64,7 +64,7 @@ namespace copy
 		}
 	}
 	
-	void Scene::AddGameObject(GameObject* gameObj, const eLayerType type)
+	void Scene::AddGameObject(GameObject* gameObj, const enums::eLayerType type)
 	{
 		mLayers[(UINT)type]->AddGameObject(gameObj);
 	}

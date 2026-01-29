@@ -1,12 +1,15 @@
 #include "copyGameObject.h" 
 #include "copyInput.h"
 #include "copyTime.h"
+#include "copyTransform.h"
 
 namespace copy
 {
 	GameObject::GameObject()
 	{
 		mComponents = {};
+
+		InitializeTransform();
 	}
 	
 	GameObject::~GameObject()
@@ -48,5 +51,10 @@ namespace copy
 		{
 			comp->Render(hdc);
 		}
+	}
+
+	void GameObject::InitializeTransform()
+	{
+		AddComponet<Transform>();
 	}
 }

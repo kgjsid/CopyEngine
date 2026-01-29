@@ -23,6 +23,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)copyInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyScene.h" />

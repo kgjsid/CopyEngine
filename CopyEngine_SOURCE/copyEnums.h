@@ -1,6 +1,6 @@
 #pragma once
 
-namespace copy
+namespace copy::enums
 {
 	enum class eLayerType
 	{

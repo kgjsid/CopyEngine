@@ -6,6 +6,7 @@
 #include "copyInput.h"
 #include "copyTitleScene.h"
 #include "copySceneManager.h"
+#include "copyObject.h"
 
 namespace copy
 {
@@ -18,16 +19,11 @@ namespace copy
 	}
 	void PlayScene::Initialize()
 	{
-		bg = new Player();
-		Transform* tr = bg->AddComponet<Transform>();
-		tr->SetPos(Vector2(0, 0));
-		tr->SetName(L"TR");
+		bg = object::Instantiate<Player>(enums::eLayerType::BackGround, Vector2(100.0f, 100.0f));
 
 		SpriteRenderer* sr = bg->AddComponet<SpriteRenderer>();
 		sr->SetName(L"SR");
 		sr->ImageLoad(L"D:\\Win\\CopyEngine\\Resources\\CloudOcean.png");
-
-		AddGameObject(bg, eLayerType::BackGround);
 	}
 	void PlayScene::Update()
 	{
@@ -54,6 +50,6 @@ namespace copy
 	void PlayScene::OnExit()
 	{	// PlayScene을 다른 Scene으로 전환할 때 위치 초기화
 		Transform* tr = bg->GetComponent<Transform>();
-		tr->SetPos(Vector2(0, 0));
+		tr->SetPosition(Vector2(0, 0));
 	}
 }
