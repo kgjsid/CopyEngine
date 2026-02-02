@@ -4,7 +4,7 @@
 // 해당 전역변수가 존재함을 알려주는 키워드
 extern copy::Application application;
 
-namespace copy::graphics
+namespace copy::graphcis
 {
 	Texture::Texture()
 		: Resource(enums::eResourceType::Texture)

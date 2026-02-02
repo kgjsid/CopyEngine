@@ -1,7 +1,7 @@
 #pragma once
 #include "copyResource.h"
 
-namespace copy::graphics
+namespace copy::graphcis
 {
 	class Texture : public Resource
 	{

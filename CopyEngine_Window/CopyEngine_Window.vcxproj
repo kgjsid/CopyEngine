@@ -136,6 +136,7 @@
     <ClInclude Include="copyPlayer.h" />
     <ClInclude Include="copyPlayScene.h" />
     <ClInclude Include="copyTitleScene.h" />
+    <ClInclude Include="copyLoadResources.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="copyPlayer.cpp" />

@@ -7,6 +7,7 @@
 // ..\\ -> 상위 폴더로 이동
 #include "..\\CopyEngine_SOURCE\\copyApplication.h"
 #include "..\\CopyEngine_WINDOW\\copyLoadScene.h"
+#include "..\\CopyEngine_WINDOW\\copyLoadResources.h"
 
 copy::Application application;
 
@@ -146,6 +147,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    Gdiplus::GdiplusStartup(&gpToken, &gpsi, NULL);
 
+   copy::LoadResources();
    copy::LoadScenes();
 
    return TRUE;

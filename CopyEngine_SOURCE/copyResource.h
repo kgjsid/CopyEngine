@@ -3,7 +3,7 @@
 
 namespace copy
 {
-	class Resource : public Entity	// 추상클래스. 순수가상함수가 한개라도 들어있는 클래스
+	class Resource abstract : public Entity	// 추상클래스. 순수가상함수가 한개라도 들어있는 클래스
 	{
 	public:
 		Resource(enums::eResourceType type);

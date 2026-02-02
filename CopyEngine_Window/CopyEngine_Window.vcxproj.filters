@@ -21,6 +21,9 @@
     <ClInclude Include="copyPlayer.h">
       <Filter>Contents</Filter>
     </ClInclude>
+    <ClInclude Include="copyLoadResources.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="copyPlayScene.cpp">
