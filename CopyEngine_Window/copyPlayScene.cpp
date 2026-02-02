@@ -7,6 +7,7 @@
 #include "copyTitleScene.h"
 #include "copySceneManager.h"
 #include "copyObject.h"
+#include "copyTexture.h"
 
 namespace copy
 {
@@ -23,7 +24,8 @@ namespace copy
 
 		SpriteRenderer* sr = bg->AddComponet<SpriteRenderer>();
 		sr->SetName(L"SR");
-		sr->ImageLoad(L"D:\\Win\\CopyEngine\\Resources\\CloudOcean.png");
+		graphics::Texture* tex = new graphics::Texture();
+		tex->Load(L"D:\\Win\\CopyEngine\\Resources\\CloudOcean.png");
 	}
 	void PlayScene::Update()
 	{

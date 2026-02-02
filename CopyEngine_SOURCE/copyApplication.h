@@ -22,6 +22,9 @@ namespace copy
 		void Update();
 		void LateUpdate();
 		void Render();
+
+		HDC GetHdc() { return mHdc; }
+
 	private:
 		void AdjustRect(HWND hwnd, UINT width, UINT height);
 		void CreateBuffer(UINT width, UINT height);

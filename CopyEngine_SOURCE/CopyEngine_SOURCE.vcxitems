@@ -29,6 +29,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)copyScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copySceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copySpriteRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyTexture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyTransform.h" />
   </ItemGroup>
@@ -45,6 +46,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)copyScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copySceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copySpriteRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyTexture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyTransform.cpp" />
   </ItemGroup>

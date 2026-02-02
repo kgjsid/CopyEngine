@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)copyApplication.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)copyResource.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)copyResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyMath.cpp">
       <Filter>Common</Filter>
     </ClCompile>
@@ -35,11 +33,18 @@
       <Filter>Helpers</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)copyLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyResources.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyTexture.cpp">
+      <Filter>Resource\Texture</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)copyApplication.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)copyResource.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)copyResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
       <Filter>Common</Filter>
     </ClInclude>
@@ -80,6 +85,15 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)copyObject.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyResources.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyTexture.h">
+      <Filter>Resource\Texture</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
@@ -96,6 +110,12 @@
     </Filter>
     <Filter Include="Helpers">
       <UniqueIdentifier>{b5806142-703c-48a5-9517-b39df88a5618}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{dad619cc-8c14-4849-8c40-b1e4bf87406e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Texture">
+      <UniqueIdentifier>{31ed310e-a0be-413d-960f-480e8193180a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

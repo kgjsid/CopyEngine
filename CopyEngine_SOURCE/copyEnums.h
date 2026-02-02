@@ -11,4 +11,12 @@ namespace copy::enums
 		Player,
 		Max = 16
 	};
+
+	enum class eResourceType
+	{
+		Texture,	// 이미지
+		AudioClip,	// 오디오
+		Prefab,
+		End,
+	};
 }
