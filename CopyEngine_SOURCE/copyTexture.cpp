@@ -1,6 +1,12 @@
 #include "copyTexture.h"
 #include "copyApplication.h"
 
+// extern 키워드
+// 해당 변수가 다른 파일 어딘가에 이미 있음을 컴파일러에게 알려주는 선언
+// 정의 : 실제로 메모리 공간을 할당하고 변수를 만드는 것
+// 선언 : 이런 이름의 변수가 존재한다고 이름만 알려주는 것
+// -> extern 키워드는 정의는 다른 파일(main.cpp)에서 했으니 실제 여기에서 해당 변수가 있어서 사용하겠다는 의미(선언)
+
 // 해당 전역변수가 존재함을 알려주는 키워드
 extern copy::Application application;
 

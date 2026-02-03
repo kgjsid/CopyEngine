@@ -11,6 +11,8 @@ namespace copy
 		{	// iterator : 해당 데이터에 접근할 수 있는 포인터 변수를 담고있는 클래스
 			// std::map<std::wstring, Resource*>::iterator iter = mResources.find(key);
 			// auto : 대입하는 값에 맞춰서 자동으로 자료형을 정해주는 키워드
+			// c#의 var 문법과 유사. c++에서는 함수의 반환 타입도 auto로 지정 가능
+			// 특히 값을 지정할지 참조를 지정할지 auto, auto& 둘 중 선택해서 지정 가능
 			auto iter = mResources.find(key);
 
 			// end : 실제 데이터가 없으면 end()를 반환
