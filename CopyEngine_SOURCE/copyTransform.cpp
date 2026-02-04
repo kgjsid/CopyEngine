@@ -3,6 +3,7 @@
 namespace copy
 {
 	Transform::Transform()
+		: Component(enums::eComponentType::Transform)
 	{
 
 	}

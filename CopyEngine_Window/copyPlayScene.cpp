@@ -8,6 +8,7 @@
 #include "copySceneManager.h"
 #include "copyObject.h"
 #include "copyResources.h"
+#include "copyPlayerScript.h"
 
 namespace copy
 {
@@ -24,6 +25,7 @@ namespace copy
 
 		SpriteRenderer* sr = bg->AddComponet<SpriteRenderer>();
 		sr->SetName(L"SR");
+		bg->AddComponet<PlayerScript>();
 		
 		graphcis::Texture* tex = Resources::Find<graphcis::Texture>(L"BG");
 		sr->SetTexture(tex);

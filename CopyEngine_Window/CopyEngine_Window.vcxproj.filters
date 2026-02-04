@@ -7,6 +7,9 @@
     <Filter Include="Contents">
       <UniqueIdentifier>{2371e62f-2409-4245-8e33-83b98e124035}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{6b293405-aaa7-4dc3-8106-11727bfc3cf2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="copyLoadScene.h">
@@ -24,6 +27,9 @@
     <ClInclude Include="copyLoadResources.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="copyPlayerScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="copyPlayScene.cpp">
@@ -34,6 +40,9 @@
     </ClCompile>
     <ClCompile Include="copyPlayer.cpp">
       <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="copyPlayerScript.cpp">
+      <Filter>Scripts</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

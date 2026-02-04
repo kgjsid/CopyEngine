@@ -42,6 +42,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)copyTexture.cpp">
       <Filter>Resource\Texture</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyScript.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)copyApplication.h" />
@@ -93,6 +96,9 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)copyTexture.h">
       <Filter>Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyScript.h">
+      <Filter>Component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

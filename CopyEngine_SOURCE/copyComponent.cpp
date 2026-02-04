@@ -2,9 +2,10 @@
 
 namespace copy
 {
-	Component::Component()
+	Component::Component(enums::eComponentType type)
 	{
 		mOwner = nullptr;
+		mType = type;
 	}
 	Component::~Component()
 	{

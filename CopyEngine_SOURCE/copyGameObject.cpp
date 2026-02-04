@@ -7,7 +7,7 @@ namespace copy
 {
 	GameObject::GameObject()
 	{
-		mComponents = {};
+		mComponents.resize((UINT)enums::eComponentType::End);
 
 		InitializeTransform();
 	}
@@ -25,6 +25,9 @@ namespace copy
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
+
 			comp->Initialize();
 		}
 	}
@@ -33,6 +36,9 @@ namespace copy
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
+
 			comp->Update();
 		}
 	}
@@ -41,6 +47,9 @@ namespace copy
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
+
 			comp->LateUpdate();
 		}
 	}
@@ -49,6 +58,9 @@ namespace copy
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+				continue;
+
 			comp->Render(hdc);
 		}
 	}

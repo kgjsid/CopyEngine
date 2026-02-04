@@ -134,12 +134,14 @@
   <ItemGroup>
     <ClInclude Include="copyLoadScene.h" />
     <ClInclude Include="copyPlayer.h" />
+    <ClInclude Include="copyPlayerScript.h" />
     <ClInclude Include="copyPlayScene.h" />
     <ClInclude Include="copyTitleScene.h" />
     <ClInclude Include="copyLoadResources.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="copyPlayer.cpp" />
+    <ClCompile Include="copyPlayerScript.cpp" />
     <ClCompile Include="copyPlayScene.cpp" />
     <ClCompile Include="copyTitleScene.cpp" />
   </ItemGroup>
