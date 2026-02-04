@@ -8,7 +8,7 @@ namespace copy
 	class Camera : public Component
 	{
 	public:
-		Vector2 CaluatePosition(Vector2 pos) { return pos - mDistance; };
+		Vector2 CalculatePosition(Vector2 pos) { return pos - mDistance; };
 		
 		Camera();
 		~Camera();

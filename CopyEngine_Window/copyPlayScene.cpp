@@ -10,6 +10,7 @@
 #include "copyResources.h"
 #include "copyPlayerScript.h"
 #include "copyCamera.h"
+#include "copyRenderer.h"
 
 namespace copy
 {
@@ -25,6 +26,7 @@ namespace copy
 		// main Camera
 		GameObject* camera = object::Instantiate<GameObject>(enums::eLayerType::None);
 		Camera* cameraComp = camera->AddComponet<Camera>();
+		renderer::mainCamera = cameraComp;
 
 		camera->AddComponet<Camera>();
 

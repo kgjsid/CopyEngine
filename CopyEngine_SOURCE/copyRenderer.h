@@ -1,9 +1,8 @@
 #pragma once
+#include "copyCamera.h"
 
-namespace copy
+namespace copy::renderer
 {
-	class Renderer
-	{
-	};
+	extern Camera* mainCamera;
 }
 

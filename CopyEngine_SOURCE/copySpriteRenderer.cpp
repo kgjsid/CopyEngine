@@ -2,6 +2,7 @@
 #include "copyGameObject.h"
 #include "copyTransform.h"
 #include "copyTexture.h"
+#include "copyRenderer.h"
 
 namespace copy
 {
@@ -30,7 +31,8 @@ namespace copy
 
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 pos = tr->GetPosition();
-		
+		Vector2 cameraPos = renderer::mainCamera->CalculatePosition(pos);
+
 		if (mTexture->GetTextureType() == graphcis::Texture::eTextureType::Bmp)
 		{
 			TransparentBlt(hdc, pos.x, pos.y

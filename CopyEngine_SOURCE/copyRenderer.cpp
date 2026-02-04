@@ -1,6 +1,6 @@
 #include "copyRenderer.h"
 
-namespace copy
+namespace copy::renderer
 {
-
+	Camera* mainCamera = nullptr;
 }
