@@ -9,6 +9,7 @@
 #include "copyObject.h"
 #include "copyResources.h"
 #include "copyPlayerScript.h"
+#include "copyCamera.h"
 
 namespace copy
 {
@@ -21,6 +22,12 @@ namespace copy
 	}
 	void PlayScene::Initialize()
 	{
+		// main Camera
+		GameObject* camera = object::Instantiate<GameObject>(enums::eLayerType::None);
+		Camera* cameraComp = camera->AddComponet<Camera>();
+
+		camera->AddComponet<Camera>();
+
 		bg = object::Instantiate<Player>(enums::eLayerType::BackGround, Vector2(100.0f, 100.0f));
 
 		SpriteRenderer* sr = bg->AddComponet<SpriteRenderer>();

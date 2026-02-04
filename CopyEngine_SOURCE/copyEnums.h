@@ -7,6 +7,7 @@ namespace copy::enums
 		Transform,
 		SpriteRenderer,
 		Script,
+		Camera,
 		End
 	};
 

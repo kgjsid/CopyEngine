@@ -16,6 +16,7 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyCamera.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyEnums.h" />
@@ -24,6 +25,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)copyLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)copyScene.h" />
@@ -36,12 +38,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)copyApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyCamera.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)copyScene.cpp" />
