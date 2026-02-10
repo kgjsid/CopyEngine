@@ -6,6 +6,7 @@ namespace copy::enums
 	{
 		Transform,
 		SpriteRenderer,
+		Animator,
 		Script,
 		Camera,
 		End
@@ -25,6 +26,7 @@ namespace copy::enums
 	{
 		Texture,	// 이미지
 		AudioClip,	// 오디오
+		Animation,
 		Prefab,
 		End,
 	};

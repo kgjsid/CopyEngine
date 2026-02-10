@@ -1,6 +1,8 @@
 #pragma once
 #include "CommonInclude.h"
 
+using namespace copy::math;
+
 namespace copy
 {
 	class Entity

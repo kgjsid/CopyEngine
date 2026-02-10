@@ -7,9 +7,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)copyEntity.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)copyComponent.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)copyGameObject.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
@@ -53,6 +50,15 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)copyRenderer.cpp">
       <Filter>Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyComponent.cpp">
+      <Filter>Component\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyAnimator.cpp">
+      <Filter>Component\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)copyAnimation.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
@@ -63,9 +69,6 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)copyEntity.h">
       <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)copyComponent.h">
-      <Filter>Component</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)copyGameObject.h">
       <Filter>GameObject</Filter>
@@ -116,6 +119,15 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)copySpriteRenderer.h">
       <Filter>Component\SpriteRenderer</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyComponent.h">
+      <Filter>Component\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyAnimator.h">
+      <Filter>Component\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)copyAnimation.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
@@ -156,6 +168,9 @@
     </Filter>
     <Filter Include="Renderer">
       <UniqueIdentifier>{705e1d6b-602c-41d7-bab5-64f172acf1ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Component">
+      <UniqueIdentifier>{6f2d4952-583b-4901-8e8a-5e75d1bfe08a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
