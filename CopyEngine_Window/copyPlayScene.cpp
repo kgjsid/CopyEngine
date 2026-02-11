@@ -11,12 +11,13 @@
 #include "copyPlayerScript.h"
 #include "copyCamera.h"
 #include "copyRenderer.h"
+#include "copyAnimator.h"
 
 namespace copy
 {
 	PlayScene::PlayScene()
 	{
-		bg = nullptr;
+		mPlayer = nullptr;
 	}
 	PlayScene::~PlayScene()
 	{
@@ -30,14 +31,16 @@ namespace copy
 
 		camera->AddComponet<Camera>();
 
-		bg = object::Instantiate<Player>(enums::eLayerType::BackGround, Vector2(100.0f, 100.0f));
-
-		SpriteRenderer* sr = bg->AddComponet<SpriteRenderer>();
-		sr->SetName(L"SR");
-		bg->AddComponet<PlayerScript>();
+		mPlayer = object::Instantiate<Player>(enums::eLayerType::BackGround, Vector2(100.0f, 100.0f));
+		mPlayer->AddComponet<PlayerScript>();
 		
-		graphcis::Texture* tex = Resources::Find<graphcis::Texture>(L"BG");
-		sr->SetTexture(tex);
+		graphcis::Texture* tex = Resources::Find<graphcis::Texture>(L"Cat");
+
+		Animator* animator = mPlayer->AddComponet<Animator>();
+		animator->CreateAnimation(L"CatFrontMove", tex
+			, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.5f);
+		
+		animator->PlayAnimation(L"CatFrontMove", true);
 	}
 	void PlayScene::Update()
 	{
@@ -63,7 +66,7 @@ namespace copy
 	}
 	void PlayScene::OnExit()
 	{	// PlayScene을 다른 Scene으로 전환할 때 위치 초기화
-		Transform* tr = bg->GetComponent<Transform>();
+		Transform* tr = mPlayer->GetComponent<Transform>();
 		tr->SetPosition(Vector2(0, 0));
 	}
 }

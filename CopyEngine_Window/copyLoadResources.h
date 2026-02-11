@@ -7,5 +7,6 @@ namespace copy
 	void LoadResources()
 	{
 		Resources::Load<graphcis::Texture>(L"BG", L"D:\\Win\\CopyEngine\\Resources\\CloudOcean.png");
+		Resources::Load<graphcis::Texture>(L"Cat", L"D:\\Win\\CopyEngine\\Resources\\ChickenAlpha.bmp");
 	}
 }
