@@ -42,9 +42,25 @@ namespace copy
 		}
 		else if (mTexture->GetTextureType() == graphcis::Texture::eTextureType::Png)
 		{
-			Gdiplus::Graphics graphics(hdc);
-			graphics.DrawImage(mTexture->GetImage(), 
-				Gdiplus::Rect(pos.x, pos.y, mTexture->GetWidth(), mTexture->GetHeight()));
+			// 투명화 시킬 픽셀의 색 범위
+			Gdiplus::ImageAttributes imgAtt = {};
+			imgAtt.SetColorKey(Gdiplus::Color(230, 230, 230), Gdiplus::Color(255, 255, 255));
+
+			Gdiplus::Graphics graphcis(hdc);
+
+			graphcis.TranslateTransform(-pos.x, -pos.y);
+
+			graphcis.DrawImage(mTexture->GetImage(),
+				Gdiplus::Rect
+				(
+					pos.x, pos.y
+					, mTexture->GetWidth() * mSize.x 
+					, mTexture->GetHeight() * mSize.y
+				)
+				, 0, 0
+				, mTexture->GetWidth(), mTexture->GetHeight()
+				, Gdiplus::UnitPixel
+				, nullptr);
 		}
 	}
 }
